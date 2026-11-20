@@ -1,0 +1,12 @@
+# Environnements Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Fichiers de l'éditeur et du système
+.vscode/
+.DS_Store
+Thumbs.db
+# Secrets : ne jamais publier de clés ou de mots de passe
+.env

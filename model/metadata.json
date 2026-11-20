@@ -1,0 +1,76 @@
+{
+  "nom": "prix-logement-king-county",
+  "version": "1.0.0",
+  "entraine_le": "2026-11-20T22:35:03Z",
+  "algorithme": "HistGradientBoostingRegressor (cible log1p)",
+  "scikit_learn": "1.9.1",
+  "variables": [
+    "surface_m2",
+    "chambres",
+    "salles_de_bain",
+    "etages",
+    "age_ans",
+    "distance_centre_km",
+    "bord_de_l_eau",
+    "etat",
+    "qualite"
+  ],
+  "plages_observees": {
+    "surface_m2": [
+      34.4,
+      1257.9
+    ],
+    "chambres": [
+      1.0,
+      10.0
+    ],
+    "salles_de_bain": [
+      0.5,
+      8.0
+    ],
+    "etages": [
+      1.0,
+      3.5
+    ],
+    "age_ans": [
+      0.0,
+      115.0
+    ],
+    "distance_centre_km": [
+      0.98,
+      77.09
+    ],
+    "bord_de_l_eau": [
+      0.0,
+      1.0
+    ],
+    "etat": [
+      1.0,
+      5.0
+    ],
+    "qualite": [
+      3.0,
+      13.0
+    ]
+  },
+  "metriques_test": {
+    "MAE_usd": 99383.0,
+    "RMSE_usd": 178802.0,
+    "R2": 0.8062
+  },
+  "metriques_reference_lineaire": {
+    "MAE_usd": 120707.0,
+    "RMSE_usd": 309809.0,
+    "R2": 0.4182
+  },
+  "lignes_entrainement": 17134,
+  "lignes_test": 4284,
+  "jeu_de_donnees": "House Sales in King County, USA (mai 2014 - mai 2015), licence CC0",
+  "source": "https://www.kaggle.com/datasets/harlfoxem/housesalesprediction",
+  "point_reference_centre": {
+    "lat": 47.6062,
+    "lon": -122.3321
+  },
+  "devise": "USD",
+  "sha256_modele": "72a687056c8b850383926387cf80bfa4914cb4449cacec4501311eba935588b4"
+}

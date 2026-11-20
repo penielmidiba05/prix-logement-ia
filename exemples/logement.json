@@ -1,0 +1,11 @@
+{
+  "surface_m2": 150,
+  "chambres": 3,
+  "salles_de_bain": 2,
+  "etages": 1,
+  "age_ans": 30,
+  "distance_centre_km": 12,
+  "bord_de_l_eau": false,
+  "etat": 3,
+  "qualite": 7
+}

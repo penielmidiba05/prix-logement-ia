@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estimation du prix d'un logement</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Estimation du prix d'un logement</h1>
+    <p>Modèle d'apprentissage automatique entraîné sur les ventes réelles du comté de King
+       (Seattle, États-Unis, mai 2014 à mai 2015). Le prix est donné en dollars américains.</p>
+    <p class="info" id="info-modele">Connexion à l'API…</p>
+  </header>
+
+  <main>
+    <form id="formulaire" novalidate>
+      <div class="grille">
+        <label>Surface habitable (m²)
+          <input type="number" name="surface_m2" min="20" max="1300" step="0.1" value="150" required>
+          <small>Entre 20 et 1 300 m²</small>
+        </label>
+        <label>Nombre de chambres
+          <input type="number" name="chambres" min="1" max="10" step="1" value="3" required>
+          <small>Entier entre 1 et 10</small>
+        </label>
+        <label>Salles de bain
+          <input type="number" name="salles_de_bain" min="0.5" max="8" step="0.25" value="2" required>
+          <small>Par quarts : 0,5 = toilettes et lavabo seuls</small>
+        </label>
+        <label>Nombre de niveaux
+          <input type="number" name="etages" min="1" max="3.5" step="0.5" value="1" required>
+          <small>1, 1,5, 2… jusqu'à 3,5</small>
+        </label>
+        <label>Âge du bâtiment (années)
+          <input type="number" name="age_ans" min="0" max="120" step="1" value="30" required>
+          <small>Entier entre 0 et 120</small>
+        </label>
+        <label>Distance au centre-ville (km)
+          <input type="number" name="distance_centre_km" min="0" max="80" step="0.1" value="12" required>
+          <small>À vol d'oiseau, entre 0 et 80 km</small>
+        </label>
+        <label>État général
+          <select name="etat">
+            <option value="1">1 : mauvais</option>
+            <option value="2">2 : passable</option>
+            <option value="3" selected>3 : moyen</option>
+            <option value="4">4 : bon</option>
+            <option value="5">5 : excellent</option>
+          </select>
+          <small>Évaluation du comté de King</small>
+        </label>
+        <label>Qualité de construction
+          <input type="number" name="qualite" min="1" max="13" step="1" value="7" required>
+          <small>Note du comté de 1 à 13 (7 = moyenne)</small>
+        </label>
+        <label class="case">
+          <input type="checkbox" name="bord_de_l_eau"> Le terrain donne sur l'eau
+        </label>
+      </div>
+
+      <details>
+        <summary>Options avancées</summary>
+        <label>Clé d'API (seulement si le serveur en exige une)
+          <input type="password" name="cle_api" autocomplete="off">
+        </label>
+      </details>
+
+      <button type="submit" id="bouton">Estimer le prix</button>
+    </form>
+
+    <section id="resultat" hidden>
+      <p class="etiquette">Prix estimé</p>
+      <p class="prix" id="prix"></p>
+      <p class="detail" id="detail"></p>
+    </section>
+
+    <section id="erreur" hidden></section>
+  </main>
+
+  <footer>Données : « House Sales in King County, USA », licence CC0. Estimation indicative.</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

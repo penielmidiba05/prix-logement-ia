@@ -1,0 +1,19 @@
+# Ce qui n'a rien à faire dans l'image : environnement local, données brutes, tests, Git
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+training/
+tests/
+.git/
+.gitignore
+.vscode/
+*.md
+requirements-dev.txt
+Dockerfile
+.dockerignore
+exemples/
+outils/
+deploy/

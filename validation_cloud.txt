@@ -1,0 +1,10 @@
+GET /health      -> 200 {'statut': 'ok', 'modele_charge': True}
+GET /model-info  -> 200 version=1.0.0 sha256=72a687056c8b8503...
+[OK ] Maison type                                -> 200 (attendu 200) 392,337 USD
+[OK ] Petit appartement ancien                   -> 200 (attendu 200) 385,049 USD
+[OK ] Grande maison récente au bord de l'eau     -> 200 (attendu 200) 2,119,041 USD
+[OK ] Surface négative                           -> 422 (attendu 422) Input should be greater than or equal to 20
+[OK ] État hors bornes                           -> 422 (attendu 422) Input should be less than or equal to 5
+[OK ] Champ manquant                             -> 422 (attendu 422) Field required
+
+6/6 cas conformes

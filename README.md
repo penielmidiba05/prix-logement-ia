@@ -4,6 +4,17 @@ Application d'intelligence artificielle qui estime le prix d'un logement à part
 9 caractéristiques, exposée par une API FastAPI, conteneurisée avec Docker et
 déployée sur AWS (Amazon ECR + ECS Express Mode, région eu-north-1).
 
+## Auteur
+
+**Peniel Corjezy Midiba** — élève ingénieur en Intelligence Artificielle (5e année), Université Euromed de Fès (UEMF), Maroc.
+
+Ingénieur IA / Data en formation : machine learning, deep learning, vision par ordinateur, data science et mise en production de modèles (API, Docker, CI/CD).
+
+- GitHub : [github.com/penielmidiba05](https://github.com/penielmidiba05)
+- LinkedIn : (https://www.linkedin.com/in/peniel-corjezy-midiba/)
+- E-mail : (mailto:penielmid1@gmail.com)
+
+
 ## Données
 « House Sales in King County, USA » : 21 613 ventes de maisons du comté de King
 (Seattle, États-Unis), mai 2014 à mai 2015, licence CC0.
